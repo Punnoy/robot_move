@@ -85,7 +85,7 @@ class move_robot:
 	def turn_right_90(self):
 		self.cmd_vel_val.linear.x = 0.1
 		self.cmd_vel_val.angular.z = -0.4
-		time = 4.5*self.Hz
+		time = 4*self.Hz
 		i = 0
 		while i <= time:
 			if sdata.markers != []:
