@@ -24,11 +24,9 @@ class move_robot:
 			self.data_id = data.markers[0].id
 			self.distance_z = data.markers[0].pose.pose.position.z
 			self.distance_x = data.markers[0].pose.pose.position.x
-			self.move_until_close()
 		else:
 			self.detect=False
-			self.move_until_close()
-		
+		self.move_until_close()
 
 	def move_until_close(self):
 		if self.detect == True and self.data_id == self.target:
