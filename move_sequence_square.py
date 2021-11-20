@@ -86,9 +86,6 @@ class move_robot:
 		time = 4*self.Hz
 		i = 0
 		while i <= time:
-			if sdata.markers != []:
-				break
-
 			self.pub.publish(self.cmd_vel_val)
 			i += 1
 			self.rate.sleep()
